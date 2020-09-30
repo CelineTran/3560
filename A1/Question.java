@@ -1,14 +1,9 @@
-public class Question {
-    public static void main(String [] args) {
-        
-    }
+public interface Question {
 
-    public void MCQ(){
+    public void createQuestion(); 
 
-    }
+    public void generateQuestions(); 
 
-    public void SCQ(){
-        
-    }
+    public void getScore(); 
 
 }
