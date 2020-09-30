@@ -1,4 +1,4 @@
-import java.util.Random
+import java.util.Math
 
 public class SCQ implements Question {
 
@@ -80,26 +80,4 @@ public class SCQ implements Question {
         questions[index][4] = "Yu Sun";
         questions[index++][5] = "4";
     }
-
-    @Override
-    public String[][] generateQuestions() {
-        Random rand = new Random();
-        for (int index = 0; index < questions.length - 1; ++index) {
-            String[] tempArr = questions[index];
-            int tempInt = rand.nextInt((questions.length - 1) - index) + index;
-            questions[index] = questions[tempInt];
-            questions[tempInt] = tempArr;
-        }
-
-        String[][] finalQuestions = new String[5][];
-        for (int index = 0; index < 5; ++index)
-            finalQuestions[i] = questions[i];
-
-    }
-
-    @Override
-    public void getScore() {
-
-    }
-
 }

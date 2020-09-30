@@ -1,14 +1,16 @@
 
 public class Student (){
-    public static void main(String [] args){
-        
-    }    
 
-    public Student(){
-        
+    private String Uid; 
+    private int score; 
+
+    public Student(String id){
+        this.Uid = id; 
+        score = 0; 
     }
 
-    String UID; 
-
-    public String getId(){return UID;}
+    public String getId(){return Uid;}
+    public void addScore(){score++;}
+    public int getScore(){return score;}
+    public void setId(String id){this.id = id;}
 }
